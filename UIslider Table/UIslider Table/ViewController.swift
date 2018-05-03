@@ -35,7 +35,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let id = "RE"
         let cell = myTable.dequeueReusableCell(withIdentifier: id, for: indexPath)
-        cell.textLabel?.text = String(Int(myslider.value))
+        cell.textLabel?.text = String(Int(myslider.value)+indexPath.row)
         return cell
     }
 
