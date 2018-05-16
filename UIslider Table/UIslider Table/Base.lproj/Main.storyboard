@@ -54,12 +54,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9h1-ap-xih" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0ok-iN-o9X"/>
-                            <constraint firstItem="9h1-ap-xih" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6vW-4y-QRI"/>
+                            <constraint firstItem="9h1-ap-xih" firstAttribute="top" secondItem="2Ml-Pg-GjM" secondAttribute="bottom" constant="41" id="4gw-ih-H6X"/>
                             <constraint firstItem="2Ml-Pg-GjM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qu2-bL-jPG"/>
-                            <constraint firstItem="9h1-ap-xih" firstAttribute="top" secondItem="2Ml-Pg-GjM" secondAttribute="bottom" constant="41" id="YkZ-fr-v6P"/>
+                            <constraint firstItem="9h1-ap-xih" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kS2-yK-z6n"/>
                             <constraint firstItem="2Ml-Pg-GjM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="kkn-72-hkR"/>
-                            <constraint firstItem="9h1-ap-xih" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lk3-3Y-H7A"/>
+                            <constraint firstItem="9h1-ap-xih" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ljv-07-2Jv"/>
+                            <constraint firstItem="9h1-ap-xih" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tTw-JF-l5M"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
