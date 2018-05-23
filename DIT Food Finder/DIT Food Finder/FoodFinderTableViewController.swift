@@ -13,7 +13,7 @@ class FoodFinderTableViewController: UITableViewController {
     var foodStoreName = ["늘해랑", "번개반점", "아딸", "왕짜장", "토마토 도시락", "홍콩반점"]
     var foodStoreImage = ["01", "02", "03", "04", "05", "06"]
     var foodStoreAddress = ["부산시 진구 양정동", "부산시 진구 양정동", "부산시 진구 양정동", "부산시 진구 양정동", "부산시 진구 양정동", "부산시 진구 양정동"]
-    
+    var foodStoreType = ["돼지국밥", "중국집", "분식점", "중국집", "도시락", "중국집"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +22,8 @@ class FoodFinderTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        self.title = "DIT 배달통"
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,10 +53,39 @@ class FoodFinderTableViewController: UITableViewController {
         cell.cellImage.image = UIImage(named: foodStoreImage[indexPath.row])
         cell.cellName.text = foodStoreName[indexPath.row]
         cell.cellAddress.text = foodStoreAddress[indexPath.row]
+        cell.cellType.text = foodStoreType[indexPath.row]
         
         return cell
     }
- 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        print(foodStoreName[indexPath.row])
+        
+        let optionMenu = UIAlertController(title: nil, message: "뭘원하나", preferredStyle: .actionSheet)
+        
+        let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+        
+        let callAction = UIAlertAction(title: "전화걸기", style: .default) {
+            (action: UIAlertAction) -> Void in
+                print("전화걸기 실행")
+                let alertMessage = UIAlertController(title: "서비스 구축중", message: "죄송합니다", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            
+            alertMessage.addAction(okAction)
+            self.present(alertMessage, animated: true)
+        }
+        
+        let checkinAction = UIAlertAction(title: "Check in", style: .default) {
+            (action: UIAlertAction) -> Void in
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = .checkmark
+        }
+        
+        optionMenu.addAction(cancelAction)
+        optionMenu.addAction(callAction)
+        optionMenu.addAction(checkinAction)
+        present(optionMenu, animated : true)
+    }
 
     /*
     // Override to support conditional editing of the table view.
