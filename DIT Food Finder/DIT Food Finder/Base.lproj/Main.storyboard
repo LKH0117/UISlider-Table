@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -74,6 +75,7 @@
                                     <outlet property="cellImage" destination="59c-fW-Bsg" id="p8E-qa-NY5"/>
                                     <outlet property="cellName" destination="h6v-5x-Vt5" id="cI3-xC-9Ak"/>
                                     <outlet property="cellType" destination="l2s-1z-KbN" id="VfI-Ln-y6m"/>
+                                    <segue destination="2ga-8P-alf" kind="show" identifier="Detail" id="uyh-o0-wzB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -87,6 +89,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6g9-0X-9za" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="448.80000000000001" y="128.18590704647679"/>
+        </scene>
+        <!--Detail View Controllor-->
+        <scene sceneID="j8I-CU-BET">
+            <objects>
+                <viewController id="2ga-8P-alf" customClass="DetailViewControllor" customModule="DIT_Food_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sqj-zF-6hd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lF6-10-JQb">
+                                <rect key="frame" x="86" y="429.5" width="202" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G1Z-Vc-yG9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="206"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hC-Yd-JNy">
+                                <rect key="frame" x="86" y="521" width="202" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Ip-C8-98Q" firstAttribute="trailing" secondItem="lF6-10-JQb" secondAttribute="trailing" constant="87" id="ReE-YX-XZT"/>
+                            <constraint firstItem="4Ip-C8-98Q" firstAttribute="bottom" secondItem="8hC-Yd-JNy" secondAttribute="bottom" constant="125.5" id="Sv3-XK-WFP"/>
+                            <constraint firstItem="G1Z-Vc-yG9" firstAttribute="top" secondItem="4Ip-C8-98Q" secondAttribute="top" id="TaY-kB-B4r"/>
+                            <constraint firstItem="lF6-10-JQb" firstAttribute="top" secondItem="G1Z-Vc-yG9" secondAttribute="bottom" constant="159.5" id="fW2-ZE-UH1"/>
+                            <constraint firstItem="4Ip-C8-98Q" firstAttribute="trailing" secondItem="8hC-Yd-JNy" secondAttribute="trailing" constant="87" id="kB3-JV-THQ"/>
+                            <constraint firstItem="G1Z-Vc-yG9" firstAttribute="leading" secondItem="4Ip-C8-98Q" secondAttribute="leading" id="m9t-6i-GJp"/>
+                            <constraint firstItem="lF6-10-JQb" firstAttribute="leading" secondItem="4Ip-C8-98Q" secondAttribute="leading" constant="86" id="pbW-D3-tbb"/>
+                            <constraint firstItem="4Ip-C8-98Q" firstAttribute="bottom" secondItem="lF6-10-JQb" secondAttribute="bottom" constant="217" id="tmP-cI-4Jp"/>
+                            <constraint firstItem="8hC-Yd-JNy" firstAttribute="leading" secondItem="4Ip-C8-98Q" secondAttribute="leading" constant="86" id="wQh-Ez-OKz"/>
+                            <constraint firstItem="G1Z-Vc-yG9" firstAttribute="trailing" secondItem="4Ip-C8-98Q" secondAttribute="trailing" id="zJN-hh-Il7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Ip-C8-98Q"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailAddress" destination="8hC-Yd-JNy" id="5Ov-7w-vUi"/>
+                        <outlet property="detailName" destination="lF6-10-JQb" id="0Us-Sa-ZQx"/>
+                        <outlet property="detailimg" destination="G1Z-Vc-yG9" id="ipY-jF-WX1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gAT-eC-McZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212" y="128.18590704647679"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="F0Z-3Y-ybH">

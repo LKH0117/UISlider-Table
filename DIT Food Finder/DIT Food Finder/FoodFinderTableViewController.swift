@@ -57,6 +57,7 @@ class FoodFinderTableViewController: UITableViewController {
         
         return cell
     }
+    /*
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
         print(foodStoreName[indexPath.row])
@@ -85,7 +86,7 @@ class FoodFinderTableViewController: UITableViewController {
         optionMenu.addAction(callAction)
         optionMenu.addAction(checkinAction)
         present(optionMenu, animated : true)
-    }
+    }*/
 
     /*
     // Override to support conditional editing of the table view.
@@ -122,14 +123,24 @@ class FoodFinderTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "Detail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as!
+                DetailViewControllor
+                
+                destinationController.cellimg = foodStoreImage[indexPath.row]
+                destinationController.cellName = foodStoreName[indexPath.row]
+                destinationController.cellAddress = foodStoreAddress[indexPath.row]
+            }
+        }
     }
-    */
+ 
 
 }
