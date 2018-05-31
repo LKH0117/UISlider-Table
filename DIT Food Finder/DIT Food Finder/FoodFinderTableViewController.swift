@@ -14,6 +14,13 @@ class FoodFinderTableViewController: UITableViewController {
     var foodStoreImage = ["01", "02", "03", "04", "05", "06"]
     var foodStoreAddress = ["부산시 진구 양정동", "부산시 진구 양정동", "부산시 진구 양정동", "부산시 진구 양정동", "부산시 진구 양정동", "부산시 진구 양정동"]
     var foodStoreType = ["돼지국밥", "중국집", "분식점", "중국집", "도시락", "중국집"]
+    var foodMenu = ["돼지국밥, 돼지수육, 순대국밥",
+                    "짜장면, 짬뽕, 탕수육",
+                    "떡볶이, 어묵, 순대",
+                    "볶짬면, 양장피, 짬뽕밥",
+                    "치킨마요, 돈불와퍼, 제육덮밥, 콤보도시락",
+                    "오향장육, 짬뽕, 볶음밥"
+                    ]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -138,6 +145,7 @@ class FoodFinderTableViewController: UITableViewController {
                 destinationController.cellimg = foodStoreImage[indexPath.row]
                 destinationController.cellName = foodStoreName[indexPath.row]
                 destinationController.cellAddress = foodStoreAddress[indexPath.row]
+                destinationController.cellMenu = foodMenu[indexPath.row]
             }
         }
     }
