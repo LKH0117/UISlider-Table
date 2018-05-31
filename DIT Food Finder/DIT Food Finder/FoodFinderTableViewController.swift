@@ -134,7 +134,7 @@ class FoodFinderTableViewController: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as!
                 DetailViewControllor
-                
+                destinationController.celltype = foodStoreType[indexPath.row]
                 destinationController.cellimg = foodStoreImage[indexPath.row]
                 destinationController.cellName = foodStoreName[indexPath.row]
                 destinationController.cellAddress = foodStoreAddress[indexPath.row]

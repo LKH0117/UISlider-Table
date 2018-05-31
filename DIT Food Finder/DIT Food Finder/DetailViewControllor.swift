@@ -16,12 +16,13 @@ class DetailViewControllor: UIViewController {
     var cellName = ""
     var cellAddress = ""
     var cellimg = ""
+    var celltype = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = cellName
         // Do any additional setup after loading the view.
-        detailName.text = cellName
         detailAddress.text = cellAddress
+        detailName.text = celltype
         detailimg.image = UIImage(named: cellimg)
     }
 
