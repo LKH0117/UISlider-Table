@@ -12,7 +12,7 @@ class FoodFinderTableViewController: UITableViewController {
     
     var foodStoreName = ["늘해랑", "번개반점", "아딸", "왕짜장", "토마토 도시락", "홍콩반점"]
     var foodStoreImage = ["01", "02", "03", "04", "05", "06"]
-    var foodStoreAddress = ["부산시 진구 양정동", "부산시 진구 양정동", "부산시 진구 양정동", "부산시 진구 양정동", "부산시 진구 양정동", "부산시 진구 양정동"]
+    var foodStoreAddress = ["부산시 진구 양정1동 350-1", "부산시 진구 양정동 418-282", "부산시 진구 양정동 393-18", "부산시 진구 양정1동 356-22", "부산시 진구 양정1동 350-1", "부산시 진구 양정동 353-38"]
     var foodStoreType = ["돼지국밥", "중국집", "분식점", "중국집", "도시락", "중국집"]
     var foodMenu = ["돼지국밥, 돼지수육, 순대국밥",
                     "짜장면, 짬뽕, 탕수육",
@@ -21,6 +21,7 @@ class FoodFinderTableViewController: UITableViewController {
                     "치킨마요, 돈불와퍼, 제육덮밥, 콤보도시락",
                     "오향장육, 짬뽕, 볶음밥"
                     ]
+    var foodStoreTel = ["051-863-6997", "051-852-9969", "051-852-9969", "051-852-9969", "051-852-9969", "051-853-0410"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -146,6 +147,7 @@ class FoodFinderTableViewController: UITableViewController {
                 destinationController.cellName = foodStoreName[indexPath.row]
                 destinationController.cellAddress = foodStoreAddress[indexPath.row]
                 destinationController.cellMenu = foodMenu[indexPath.row]
+                destinationController.cellTel = foodStoreTel[indexPath.row]
             }
         }
     }

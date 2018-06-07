@@ -18,6 +18,7 @@ class DetailViewControllor: UIViewController, UITableViewDataSource, UITableView
     var cellimg = ""
     var celltype = ""
     var cellMenu = ""
+    var cellTel = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = cellName
@@ -34,25 +35,28 @@ class DetailViewControllor: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
-        cell.textLabel?.text = cellMenu
         
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
-            cell.textLabel?.text = cellAddress
+            cell.textLabel?.text = "주소 : " + cellAddress
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
-            cell.textLabel?.text = celltype
+            cell.textLabel?.text = "종류 : " + celltype
+            return cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
+            cell.textLabel?.text = "전화번호 : " + cellTel
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
-            cell.textLabel?.text = cellMenu
+            cell.textLabel?.text = "메뉴 : " + cellMenu
             return cell
         }
         return cell
